@@ -17,6 +17,7 @@ disconnect <<MAC>>
 connect <<MAC>>
 pair <<MAC>>
 
+## To create /dev/recomm0 file: 
 sudo rfcomm bind hci0 XX:XX:XX:XX:XX:XX 1
 Now /dev/rfcomm0 was created
 
