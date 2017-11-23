@@ -3,6 +3,10 @@ https://github.com/Josh-Weston/ArduinoRPi/blob/master/HC05_bluetooth_read.py
 https://www.linuxquestions.org/questions/linux-networking-3/dev-rfcomm0-missing-in-my-ubuntu-9-1-a-808325/
 https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=125922
 
+# Connect 2 module Bluetooth HC-05
+http://www.martyncurrey.com/connecting-2-arduinos-by-bluetooth-using-a-hc-05-and-a-hc-06-easy-method-using-cmode/
+- Note: Using AT commands in the file "MLT-BT05-AT-commands" in this repo.
+
 # connect to bluetooth module on PI
 sudo bluetoothctl 
 agent on
@@ -21,3 +25,6 @@ pair <<MAC>>
 sudo rfcomm bind hci0 XX:XX:XX:XX:XX:XX 1
 Now /dev/rfcomm0 was created
 
+## When test read/write data from pi/ubuntu 17.04, it raise error below: 
+   raise SerialException('device reports readiness to read but returned no data (device disconnected or multiple access on port?)')
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
